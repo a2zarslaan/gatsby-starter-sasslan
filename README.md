@@ -1,6 +1,6 @@
 # Gatsby Sass Starter
 
-A minimalistic Gatsby starter template featuring SASS and CSS 7-1 achitecture. The project focusses on creating websites which are not only fast, but pretty too!
+A minimalistic Gatsby starter template featuring SASS and CSS 7-1 architecture. The project focusses on creating websites which are not only fast, but pretty too!
 
 ## What Tech This Includes
 
