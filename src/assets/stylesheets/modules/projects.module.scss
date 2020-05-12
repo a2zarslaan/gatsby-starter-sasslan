@@ -1,0 +1,44 @@
+.head {
+  //background gradient
+  background: -webkit-linear-gradient(
+    240deg,
+    rgb(0, 217, 255),
+    rgb(26, 224, 204),
+    rgb(66, 213, 235),
+    rgb(94, 149, 217),
+    rgb(102, 102, 255)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.para {
+  color: var(--color-grey-dark-3);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.div {
+  color: var(--color-grey-dark-2);
+  font-size: 2rem;
+}
+
+.div a:link,
+.div a:visited {
+  color: var(--color-purple);
+}
+
+.div a:hover {
+  background: -webkit-linear-gradient(
+    240deg,
+    rgb(0, 217, 255),
+    rgb(26, 224, 204),
+    rgb(66, 213, 235),
+    rgb(94, 149, 217),
+    rgb(102, 102, 255)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

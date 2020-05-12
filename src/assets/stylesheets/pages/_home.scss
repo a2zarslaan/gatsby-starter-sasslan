@@ -1,0 +1,30 @@
+.page-home {
+  h1 {
+    font-size: 6rem;
+    font-family: BioRhyme, serif;
+    font-weight: 900;
+    //color: var(--color-grey-dark-1);
+
+    // gradient effect in heading
+    @include blue-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .heading::selection {
+    background-color: var(--color-white);
+    z-index: -2000;
+  }
+
+  .cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    img {
+      height: 40vh;
+    }
+  }
+}

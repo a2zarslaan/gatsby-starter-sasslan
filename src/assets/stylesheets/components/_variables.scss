@@ -1,0 +1,44 @@
+//To use the variables, we'll have to put them in a declaration block (scope). But that means we want them in a place which is available everywhere. And that one place is the root pseudo class
+:root {
+  //the varibale names need to be preceeded by double hyphen
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-background: #f1f1f1;
+  --color-primary-text: #424242;
+  --color-secondary-text: #a3a3a3;
+  --color-purple: #e16085;
+  --color-yellow: #fccd04;
+  --color-blue: #00d9ff;
+
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-4: #ccc;
+  --color-grey-light-1: #faf9f9;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  //variable for box-shadow properties used in _layouts
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+  //for border line
+  --line: 1px solid var(--color-grey-light-3);
+}
+
+//defining SCSS variables for media queries as CSS variables cannot be used for this. The container max width is 1200px, that's why we're creating a bp here to cover the pink bg on top of the container
+$bp-big-desktop: 112.5em; // 1800px/16px = 112.5em
+
+//defining SCSS variables for media queries as CSS variables cannot be used for this. The container max width is 1200px, that's why we're creating a bp here to cover the pink bg on top of the container
+$bp-largest: 75em; // 1200px/16px = 75em
+
+//the font in cards starts shifting to new lines here, hence another bp. We'll reduce the root font size at this bp
+$bp-large: 68.75em; // 1100px/16px = 68.75em
+
+//to put the navbar on top
+$bp-medium: 56.25em; // 900px/16px = 56.25em
+
+$bp-small: 37.5em; // 600px/16px = 37.5em
+
+$bp-smallest: 25em; // 400px/16px = 25em

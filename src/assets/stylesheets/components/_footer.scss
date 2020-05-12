@@ -1,0 +1,53 @@
+footer {
+  background-color: var(--color-white);
+
+  .container {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: var(--line);
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  p {
+    font-family: "Space Mono", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--color-grey-dark-3);
+    white-space: pre-line;
+  }
+
+  .footer__icons {
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+
+    &-item {
+      margin: 0;
+      height: 3rem;
+      width: 3rem;
+      fill: var(--color-purple);
+      padding-left: 1rem;
+
+      @include respond(tab-port) {
+        //width <= 900?
+        height: 4rem;
+        width: 4rem;
+      }
+
+      @include respond(phone) {
+        //width <= 600?
+        height: 5rem;
+        width: 5rem;
+      }
+
+      &:hover {
+        transition: all 0.4s;
+        fill: var(--color-yellow);
+        transform: translateY(-4px);
+      }
+    }
+  }
+}

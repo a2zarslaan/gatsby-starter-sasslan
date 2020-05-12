@@ -1,0 +1,85 @@
+//media query manager. Accoridng to our lecture titled "Mobile-First vs Desktop-First", we define breakpoint ranges. We're using a desktop first approach here. We can write them down here -
+/*
+  0-600px       Phone
+  600-900px     Tablet Portrait
+  900-1200px    Tablet Landscape
+  [1200-1800px] This is where our normal styles apply
+  1800px+       Big Desktop
+
+  We'll write max-width media queries for the ranges lower than our normal working range and min-width for ranges more than our normal working range 
+
+
+  $breakpoint argument choices
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+
+  ORDER: Base + Typography > General layout (eg header, footer, nav etc.) + Grid > Page layout > Components  
+
+  we'll be using ems for media queries because rems behave weirdly for media queries. 
+  1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    //if the breakpoint is equal to phone, we'll use the following media query. Here the max-width was 600px, but since we're using the relative units (ems), we'll divide the max-width by the size of 1 em, ie 600/16 = 37.5
+    @media only screen and (max-width: $bp-smallest) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    //if the breakpoint is equal to phone, we'll use the following media query. Here the max-width was 600px, but since we're using the relative units (ems), we'll divide the max-width by the size of 1 em, ie 600/16 = 37.5
+    @media only screen and (max-width: $bp-small) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    //if the breakpoint is equal to phone, we'll use the following media query. Here the max-width was 900px, but since we're using the relative units (ems), we'll divide the max-width by the size of 1 em, ie 900/16 = 56.25
+    @media only screen and (max-width: $bp-medium) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    //if the breakpoint is equal to phone, we'll use the following media query. Here the max-width was 1200px, but since we're using the relative units (ems), we'll divide the max-width by the size of 1 em, ie 1200/16 = 75
+    @media only screen and (max-width: $bp-largest) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    //if the breakpoint is equal to phone, we'll use the following media query. Here the max-width was 1800px, but since we're using the relative units (ems), we'll divide the max-width by the size of 1 em, ie 1800/16 = 112.5
+    @media only screen and (min-width: $bp-big-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin blue-gradient {
+  background: -webkit-linear-gradient(
+    240deg,
+    #00d9ff,
+    rgb(26, 224, 204),
+    rgb(66, 213, 235),
+    rgb(94, 149, 217),
+    #6666ff
+  );
+}
+
+@mixin pink-gradient {
+  background: -webkit-linear-gradient(
+    240deg,
+    #ff0000,
+    rgb(179, 255, 0),
+    rgb(255, 0, 242),
+    rgb(94, 149, 217),
+    #6666ff
+  );
+}
+
+@mixin yellow-gradient {
+  background-color: #fbb034;
+  background-image: -webkit-linear-gradient(120deg, #ffdd00 10%, #fbb034 74%);
+}

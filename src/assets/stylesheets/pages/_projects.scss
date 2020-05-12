@@ -1,0 +1,50 @@
+.page-projects {
+  h1 {
+    color: var(--color-yellow);
+  }
+
+  // main h2 {
+  //   color: var(--color-grey-dark-1);
+  //   background: var(--color-yellow);
+  //   padding: 10rem 2rem;
+  // }
+
+  // main h2:hover {
+  //   color: var(--color-white);
+  //   //background-color: var(--color-black);
+  //   @include blue-gradient;
+  //   transform: translateY(-0.6rem);
+  //   box-shadow: var(--shadow-dark);
+  //   transition: all 0.2s;
+  // }
+
+  .project-card {
+    color: var(--color-grey-dark-1);
+    background: var(--color-yellow);
+    padding: 10rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      color: var(--color-white);
+      //background-color: var(--color-black);
+      @include blue-gradient;
+      transform: translateY(-0.6rem);
+      box-shadow: var(--shadow-dark);
+      transition: all 0.2s;
+    }
+  }
+  header {
+    background-color: var(--color-yellow);
+  }
+
+  a {
+    text-decoration: none;
+    font-family: BioRhyme, sans-serif;
+  }
+
+  main li {
+    list-style-type: none;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  // normalising the css using cross browser reset
+  margin: 0;
+  padding: 0;
+
+  // use inheritance where-ever possible
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    //width <= 1200?
+    font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    //width <= 900?
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  // // we can still include phone just to test our logic out. Here we've given the phone a smaller font size then before so it's okay to use it now.
+  // @include respond(phone) {
+  //   //width <= 600?
+  //   font-size: 37.5%; //1rem = 6px, 6/16 = 37.5%
+  // }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16 = 75%
+  }
+}
+
+body {
+  font-family: "BioRhyme", serif;
+  font-weight: 200;
+  //variables in CSS are written inside var function. This and bg size property will lead to narrow tiles because the bg gradient will only be for the body element, that is just one line currently, after that there will be tiling. To prevent it, we'll use the background-repeat property
+  // background-image: linear-gradient(
+  //   to right bottom,
+  //   var(--color-purple),
+  //   var(--color-blue)
+  // );
+  // background-size: cover;
+
+  // //to prevent tiling
+  // background-repeat: no-repeat;
+
+  //setting minimum height to 100vh
+  min-height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(244, 244, 244, 1) 64%
+  );
+}
+
+.wrapper {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-white);
+
+  max-width: 120rem;
+  margin: 8rem auto;
+
+  //background-color: var(--color-grey-light-1);
+
+  //we cannot just use colors as variables, we can use other things as well, so we'll create a variable for the values inside box-shadow
+  box-shadow: var(--shadow-dark);
+
+  //border: 3rem solid #fff;
+
+  transition: all 0.2s;
+
+  @include respond(tab-land) {
+    font-size: 80%;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  //neomorphism
+  // border-radius: 50px;
+  // background: #fbf3f4;
+  //box-shadow: 7px 7px 14px #d5cfcf, -7px -7px 14px #ffffff;
+  //to fix the non roun edges adjacent to the footer
+  //overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 2.5rem;
+  font-size: 2rem;
+}
+
+h1::selection {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+p::selection,
+li::selection,
+h2::selection,
+a::selection {
+  background-color: var(--color-yellow);
+}
+
+a:hover {
+  cursor: pointer;
+}

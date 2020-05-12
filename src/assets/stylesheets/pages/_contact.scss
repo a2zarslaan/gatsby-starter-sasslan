@@ -1,0 +1,39 @@
+.page-contact {
+  h1 {
+    color: var(--color-blue);
+  }
+
+  main {
+    text-align: right;
+  }
+
+  header {
+    background-color: var(--color-blue);
+  }
+
+  header a,
+  header p {
+    color: var(--color-grey-light-1);
+  }
+
+  header a:hover {
+    color: var(--color-grey-dark-1);
+  }
+
+  .contact__icon {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    &-item {
+      fill: var(--color-purple);
+      height: 6rem;
+      width: 6rem;
+
+      &:hover {
+        transition: all 0.4s;
+        fill: var(--color-yellow);
+        transform: translateY(-6px);
+      }
+    }
+  }
+}
